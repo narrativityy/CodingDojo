@@ -1,0 +1,16 @@
+h1 {
+    color: red;
+    font-family: monospace;
+}
+
+body {
+    background-color: lemonchiffon;
+}
+
+.text-dogerblue {
+    color: dodgerblue;
+}
+
+.bg-red {
+    background-color: red;
+}
