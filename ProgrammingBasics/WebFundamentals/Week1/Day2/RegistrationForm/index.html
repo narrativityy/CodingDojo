@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <div>
+        <p>First Name: * <input type="text"></p>
+        <p>Last Name: * <input type="text"></p>
+        <p>Email Address: * <input type="email"></p>
+        <p>Password: * <input type="password"></p>
+        <p>Confirm Password: * <input type="password"></p>
+        <p>Birthday: <input type="date"></p>
+        <p>Gender Identity:</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="non-binary" name="gender" value="non-binary">
+        <label for="non-binary">Non-binary</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">I prefer not to answer</label>
+        <p>A short description about myself: </p>
+        <textarea name="description"></textarea><br>
+        <label for="language">Favorite Language</label>
+        <select id="language" name="language">
+            <option value="javascript">JavaScript</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+        </select><br>
+        <input type="checkbox" id="email-list" name="email-list">
+        <label for="email-list">Yes, I would like to receive periodic email updates</label><br>
+        <input type="submit" id="submit" name="submit" value="Create Account">
+        <p>* Indicates a required field</p>
+    </div>
+</body>
+</html>
