@@ -1,0 +1,39 @@
+body {
+    font-family: monospace;
+}
+
+li {
+    padding: 10px;
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px;
+    color: white;
+}
+
+.nav-title {
+    display: flex;
+    margin-right: 60%;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    border-width: 2px;
+    border-radius: 0px;
+    border-color: black;
+    background-color: aqua;
+    box-shadow: 2px 2px black;
+}
