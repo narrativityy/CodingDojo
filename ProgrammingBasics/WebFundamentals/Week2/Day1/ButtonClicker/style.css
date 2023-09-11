@@ -85,9 +85,5 @@ body {
 
 #main {
     margin: 0px 10%;
-}
-
-#column1 {
-    margin-right: 3%;
-
+    gap: 3%;
 }

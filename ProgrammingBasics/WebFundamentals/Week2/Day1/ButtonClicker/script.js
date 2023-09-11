@@ -2,9 +2,9 @@ function login(elem) {
     var inner = elem.innerText
     if (inner == "Login")
         elem.innerText = "Logout"
-    else {
+    else 
         elem.innerText = "Login"
-    }
+    
 }
 
 function remove(elem) {
