@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Box -->
+    <div class="box">
+        <!-- Top Bar -->
+        <div class="top-bar d-flex justify-space-between align-center">
+            <h2 class="username">Some User</h2>
+            <div class="likes d-flex justify-space-between align-center">
+                <h4><span id="like-count">3</span> like(s)</h4>
+                <button onclick="increase('#like-count')" class="like-button">Like</button>
+            </div>
+        </div>
+        <p>This is some filler text, it can say anything we like</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
