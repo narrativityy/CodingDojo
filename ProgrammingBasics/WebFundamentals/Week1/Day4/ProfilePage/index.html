@@ -30,7 +30,7 @@
                     <p>Master of shadows and the Internet!</p>
                     <div id="edit-prof" class="d-flex">
                         <img src="gear.png" alt="Settings Icon" class="icon">
-                        <p>edit profile</p>
+                        <p onclick="edit('#name')">edit profile</p>
                     </div>
                 </div>
             </div>
@@ -45,22 +45,22 @@
         </div>
         <div id="right-col">      
             <div id="connection-requests">
-                <h2 class="connection-title"><span class="notification">2</span> Connection Requests</h2>
-                <div class="requests d-flex align-center justify-between">
+                <h2 class="connection-title"><span id="connection-requests-val" class="notification">2</span> Connection Requests</h2>
+                <div id="request-1" class="requests d-flex align-center justify-between">
                     <img src="phil-s.jpg" alt="Todd Profile Picture" class="small-pic">
                     <h2>Phil S</h2>
-                    <img src="accept-circle.png" alt="Accept Icon" class="small-pic">
-                    <img src="close-circle.png" alt="Decline Icon" class="small-pic">
+                    <img onclick="accept('#request-1')" src="accept-circle.png" alt="Accept Icon" class="small-pic">
+                    <img onclick="remove('#request-1')" src="close-circle.png" alt="Decline Icon" class="small-pic">
                 </div>
-                <div class="requests d-flex align-center justify-between">
+                <div id="request-2" class="requests d-flex align-center justify-between">
                     <img src="anne-s.jpg" alt="Anne Profile Picture" class="small-pic">
                     <h2>Anne S</h2>
-                    <img src="accept-circle.png" alt="Accept Icon" class="small-pic">
-                    <img src="close-circle.png" alt="Decline Icon" class="small-pic">
+                    <img onclick="accept('#request-2')" src="accept-circle.png" alt="Accept Icon" class="small-pic">
+                    <img onclick="remove('#request-2')" src="close-circle.png" alt="Decline Icon" class="small-pic">
                 </div>
             </div>
             <div id="connections">
-                <h2 class="connection-title"><span class="notification">500+</span> Your Connections</h2>
+                <h2 class="connection-title"><span id="connections-val" class="notification">500</span> Your Connections</h2>
                 <div class="requests d-flex align-center">
                     <img src="adrien-s.jpg" alt="Adrien Profile Picture" class="small-pic">
                     <h2>Adrien S</h2>
@@ -80,5 +80,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
