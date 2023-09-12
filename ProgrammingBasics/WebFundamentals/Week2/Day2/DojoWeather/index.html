@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="head" class="d-flex justify-space-between align-center">
+        <h1>DojoWeather</h1>
+        <div onclick="cityAlert()" id="locations" class="d-flex justify-space-between align-center">
+            <h3>Burbank</h3>
+            <h3>Chicago</h3>
+            <h3>Dallas</h3>
+        </div>
+    </div>
+
+    <!-- Body -->
+    <div id="body">
+
+        <!-- title -->
+        <div id="title" class="d-flex justify-space-between align-center">
+            <h2>San Jose</h2>
+            <div>
+                <label>show temperature in</label>
+                <select onchange="convert('.temperature-val' ,this.value)">
+                    <option value="celsius">&#176;C</option>
+                    <option value="fahrenheit">&#176;F</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Forecast Boxes -->
+        <div id="forecast" class="d-flex justify-center align-center">
+
+            <!-- Today -->
+            <div class="box">
+                <h3>Today</h3>
+                <img src="assets/some_rain.png" height="125px">
+                <p>some rain</p>
+                <div class="temperature d-flex justify-space-around align-center">
+                    <h4 class="high"><span class="temperature-val">24</span>&#176;</h4>
+                    <h4 class="low"><span class="temperature-val">18</span>&#176;</h4>
+                </div>
+            </div>
+
+            <!-- Tomorrow -->
+            <div class="box">
+                <h3>Tomorrow</h3>
+                <img src="assets/some_sun.png" height="125px">
+                <p>some rain</p>
+                <div class="temperature d-flex justify-space-around align-center">
+                    <h4 class="high"><span class="temperature-val">27</span>&#176;</h4>
+                    <h4 class="low"><span class="temperature-val">19</span>&#176;</h4>
+                </div>
+            </div>
+
+            <!-- Friday -->
+            <div class="box">
+                <h3>Friday</h3>
+                <img src="assets/some_clouds.png" height="125px">
+                <p>some rain</p>
+                <div class="temperature d-flex justify-space-around align-center">
+                    <h4 class="high"><span class="temperature-val">21</span>&#176;</h4>
+                    <h4 class="low"><span class="temperature-val">16</span>&#176;</h4>
+                </div>
+            </div>
+
+            <!-- Saturday -->
+            <div class="box">
+                <h3>Saturday</h3>
+                <img src="assets/some_sun.png" height="125px">
+                <p>some rain</p>
+                <div class="temperature d-flex justify-space-around align-center">
+                    <h4 class="high"><span class="temperature-val">26</span>&#176;</h4>
+                    <h4 class="low"><span class="temperature-val">21</span>&#176;</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookies -->
+    <div id="cookies" class="d-flex justify-space-between align-center">
+        <img src="assets/cookie.png" alt="Cookie">
+        <div>
+            <h4>Stop! Cookie time</h4>
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+        </div>
+        <button onclick="remove('#cookies')" class="button">I Accept</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
