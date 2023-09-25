@@ -35,12 +35,27 @@ var arr3Expected = ["a", "b", "c"];
 
 
 function removeAt(items, idx) {
-    if (idx < 0 || idx >= items.length)
+    if (idx < 0 || idx >= items.length) {
         return null
+    }
 
-   const firstItem = items[idx]
+    const firstItem = items[idx];
 
+    if (items.length > 0) {
+      for (let i = idx + 1; i < items.length; i++) {
+        items[i - 1] = items[i];
+      }
+  
+      items.length = items.length - 1; // cut off 'empty' value at the end
+    }
+    
+    return firstItem;
 }
+
+console.log(removeAt(arr1, removeIdx1))
+console.log(removeAt(arr2, removeIdx2))
+console.log(removeAt(arr3, removeIdx3))
+console.log("-------")
 
 /* 
   Given an array, move the minimum value to the front in-place
@@ -92,4 +107,6 @@ function minToFront(nums) {
   return nums
 }
 
+console.log(minToFront(nums1))
+console.log(minToFront(nums2))
 console.log(minToFront(nums3))

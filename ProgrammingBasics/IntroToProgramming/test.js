@@ -1,18 +1,20 @@
-var arr = []
-for (var i = 1; i <= 100; i++) {
-    arr.push(i)
+async function getStreaming(imbdID) {
+    const url = `https://streaming-availability.p.rapidapi.com/get?output_language=en&imdb_id=${imbdID}`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'bf3904921emsh824bb3d208c9b70p10e228jsnef8b60565498',
+            'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        console.log(result.result.streamingInfo.us)
+    } catch (error) {
+        console.error(error);
+    }
 }
-var string
-for (var i = 0; i < arr.length; i++) {
-    string = ""
-    if (arr[i] % 3 === 0) {
-        string += "fizz"
-    }
-    if (arr[i] % 5 === 0) {
-        string += "buzz"
-    }
-    else if (string == ""){
-        string += arr[i]
-    }
-    console.log(string)
-}
+
+console.log(getStreaming("tt10293938"))
