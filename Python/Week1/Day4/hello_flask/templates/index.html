@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+</head>
+<body>
+    
+    <!-- <h1>Hello, everyone my name is {{name}}</h1> -->
+    <h1>Hello, {{ name }}</h1>
+    <img src="{{ url_for('static', filename='cake.jpg') }}">
+    <h1>This is Flask App 101 lecture!</h1>
+    this is the length of our list {{list|length}}
+    {% for i in list %}
+        <p>{{i}}</p>
+    {% endfor %}
+</body>
+</html>
