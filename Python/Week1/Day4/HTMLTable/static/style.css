@@ -1,0 +1,22 @@
+body {
+    padding: 10px;
+}
+
+table {
+    border-spacing: 10px;
+    border: solid black 2px;
+    text-align: center;
+}
+
+#head {
+    background-color: black;
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+}
+
+tr {
+    border: solid black 2px;
+}

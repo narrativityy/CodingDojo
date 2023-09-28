@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+}
+
+.box {
+    margin: 20px;
+    padding: 9%;
+    border: solid 2px white;
+    background-color: blue;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
