@@ -9,17 +9,17 @@ def hello_world():
 
 @app.route('/play')
 def play():
-    return render_template('index.html')
+    return render_template('index.html', condition = 'none')
 
 
 @app.route('/play/<number>')
 def play_number(number):
-    return render_template('play.html', number = int(number))
+    return render_template('index.html', condition = 'number', number = int(number))
 
 
 @app.route('/play/<number>/<bg_color>')
 def play_number_and_color(number, bg_color):
-    return render_template('play_with_colors.html', number = int(number), bg_color = str(bg_color))
+    return render_template('play_with_colors.html', condition = 'bg_color', number = int(number), bg_color = str(bg_color))
 
 
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    

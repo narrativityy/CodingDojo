@@ -8,9 +8,28 @@
 </head>
 <body>
     <div class="d-flex justify-content-center align-center">
+        {% if condition == 'none' %}
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
+        {% endif %}
+
+        {% if condition == 'number' %}
+        {% for i in range (0, number) %}
+
+        <div class="box"></div>
+
+        {% endfor %}
+        {% endif %}
+
+        {% if condition == 'bg_color' %}
+        {% for i in range (0, number) %}
+
+        <div class="box" style="background-color: {{bg_color}};"></div>
+
+        {% endfor %}
+        {% endif %}
+
     </div>
 </body>
 </html>
