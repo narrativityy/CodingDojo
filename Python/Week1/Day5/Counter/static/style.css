@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+}
+
+input {
+    padding: 8px;
+}
+
+#buttons {
+    margin: 10px;
+    gap: 10px;
+}
