@@ -5,7 +5,7 @@ app.secret_key = 'keep it secret, keep it safe'
 
 @app.route('/')          # The "@" decorator associates this route with the function immediately following
 def index():
-    return render_template('index.html', name = 'none', email = 'none')  # Return the string 'Hello World!' as a response
+    return render_template('index.html')  # Return the string 'Hello World!' as a response
 
 @app.route('/users', methods=['POST'])
 def redirect_user():
@@ -13,7 +13,7 @@ def redirect_user():
     
     session['username'] = request.form['name']
     session['useremail'] = request.form['email']
-    return redirect(f'/{session["username"]}/{session["useremail"]}')
+    return render_template('display_info.html')
 
 
 @app.route('/<name>/<email>')

@@ -1,0 +1,31 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+select {
+    padding: 5px;
+}
+
+.element {
+    margin: 10px;
+}
+
+#box {
+    color: white;
+    background-color: black;
+    margin: 3% 0px;
+    padding: 40px;
+}
+
+#comment {
+    min-width: 400px;
+    min-height: 300px;
+}
+
+#comment {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
