@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.boxes {
+    border: solid black 2px;
+    padding: 20px 40px;
+}
+
+#activities {
+    border: solid black 2px;
+    padding: 10px;
+}
+
+#reset {
+    padding: 20px;
+}
