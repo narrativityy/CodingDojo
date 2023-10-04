@@ -1,29 +1,3 @@
-1. mkdir hello_flask
-2. cd hello_flask
-3. pip3 install pipenv
-4. pipenv install flask pymysql (whats in your env run: pip list)
-5. python3 server.py
-
-
-# Boiler Plate
-## server.py
-```py
-from flask import Flask, render_template, session, redirect, request
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
-
-if __name__=="__main__":
-    app.run(debug=True, host='localhost', port = 5001)
-
-```
-
-## mysqlconnection.py
-```py
 # a cursor is the object we use to interact with the database
 import pymysql.cursors
 # this class will give us an instance of a connection to our database
@@ -68,8 +42,4 @@ class MySQLConnection:
 # connectToMySQL receives the database we're using and uses it to create an instance of MySQLConnection
 def connectToMySQL(db):
     return MySQLConnection(db)
-```
-7. python3 server.py
-8. ```html
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    ```
+
