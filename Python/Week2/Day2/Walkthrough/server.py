@@ -1,13 +1,5 @@
-from flask import Flask, render_template, session, redirect, request
-from model_animal import Animal
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():
-    animals = Animal.get_all()
-    return render_template('index.html', animals = animals)
-
+from flask_app import app
+from flask_app.controllers import controller_animal
 
 if __name__=="__main__":
     app.run(debug=True, host='localhost')
