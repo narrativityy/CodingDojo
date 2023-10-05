@@ -28,13 +28,13 @@ var arr2Expected = ["a"];
 function unshift(items, newItem) {
     var newArr = [newItem]
     var iterator = 1;
-  for (var i = 0; i < items.length; i++) {
-    // newArr.push(items[i])
-    newArr[iterator] = items[i]
-    iterator++
-  }
-  items = newArr
-  return items.length
+    for (var i = 0; i < items.length; i++) {
+      // newArr.push(items[i])
+      newArr[iterator] = items[i]
+      iterator++
+    }
+    items = newArr
+    return items.length
 }
 
 console.log(unshift(arr1, newItem1))
