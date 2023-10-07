@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+}
+
+.padding {
+    padding: 10px 20px;
+}
+
+table {
+    margin: 10px 0px;
+}

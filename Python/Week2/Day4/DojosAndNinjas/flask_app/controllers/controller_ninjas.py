@@ -1,21 +1,20 @@
 from flask_app.models.model_ninjas import Ninja
+from flask_app.models.model_dojos import Dojo
 from flask_app import app
 from flask import render_template, request, redirect, session
 
 # CRUD
 
 # CREATE
-# @app.post('/add_animal')
-# def add_animal():
-#     print (request.form)
-#     Ninja.create_one(request.form)
-#     return redirect('/')
+@app.route('/ninjas/new')
+def new_ninja():
+    dojos = Dojo.get_all()
+    return render_template('create_ninja.html', dojos = dojos)
 
-# READ
-@app.route('/')
-def index():
-    ninja = Ninja.get_one(1)
-    return render_template('index.html', ninja = ninja)
+@app.post('/ninjas/create')
+def add_animal():
+    Ninja.create_one(request.form)
+    return redirect('/dojos')
 
 # @app.route('/get/<int:id>')
 # def get(id):

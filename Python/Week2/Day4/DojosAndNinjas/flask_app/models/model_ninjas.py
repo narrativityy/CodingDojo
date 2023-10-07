@@ -2,7 +2,7 @@ from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app.models import model_dojos
 
 class Ninja:
-    DB = 'dojos_and_ninjas_schema'
+    DB = 'dojos_and_ninjas'
 
     def __init__(self, data):
         self.id = data['id']
@@ -21,15 +21,15 @@ class Ninja:
 
     @classmethod
     def create_one(cls, data:dict):
-        query = "INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age, dojo_id) VALUES(%(first_name)s, %(last_name)s, %(age)s, %(dojo_id)s);"
-        ninja_id = connectToMySQL('animals').query_db(query, data)
+        query = "INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES(%(first_name)s, %(last_name)s, %(age)s, %(dojo_id)s);"
+        ninja_id = connectToMySQL(Ninja.DB).query_db(query, data)
         return ninja_id
 
 
     @classmethod
     def get_all(cls) -> list:
 
-        query = "SELECT * FROM dojos_and_ninjas_schema.ninjas;"
+        query = "SELECT * FROM ninjas;"
 
         results = connectToMySQL(Ninja.DB).query_db(query)
 
@@ -39,23 +39,41 @@ class Ninja:
             instance_list.append(cls(dict))
 
         return instance_list
+
+    
+    @classmethod
+    def get_ninjas_from_dojo(cls, id):
+        query = "SELECT * FROM ninjas WHERE dojo_id = %(id)s"
+        data = {'id':id}
+        results = connectToMySQL(Ninja.DB).query_db(query, data)
+
+        if results == False:
+            return []
+
+        print ('*' * 20, results)
+        instance_list = []
+
+        for dict in results:
+            instance_list.append(cls(dict))
+
+        return instance_list
+
     
     @classmethod
     def get_one(cls, id):
-        query = "SELECT * FROM dojos_and_ninjas_schema.dojos LEFT JOIN dojos_and_ninjas_schema.ninjas ON ninjas.dojo_id = dojos.id WHERE dojos.id = %(id)s;"
+        query = "SELECT * FROM ninjas JOIN dojos ON dojos.id = ninjas.dojo_id WHERE ninjas.id = %(id)s;"
         data = {'id':id}
         results = connectToMySQL(Ninja.DB).query_db(query, data)
         if not results:
             return []
         
         dict = results[0]
-        print(cls(dict).id)
         ninja_instance = cls(dict)
 
         dojo_data = {
-            'id': dict['id'],
-            'created_at': dict['created_at'],
-            'updated_at': dict['updated_at'],
+            'id': dict['dojos.id'],
+            'created_at': dict['dojos.created_at'],
+            'updated_at': dict['dojos.updated_at'],
             'name': dict['name']
         }
 
@@ -67,12 +85,12 @@ class Ninja:
 
     @classmethod
     def update(cls, data):
-        query = """UPDATE dojos_and_ninjas_schema.ninjas SET first_name=%(first_name)s,last_name=%(last_name)s,age=%(age)s,
+        query = """UPDATE ninjas SET first_name=%(first_name)s,last_name=%(last_name)s,age=%(age)s,
         dojo_id=%(dojo_id)s WHERE id = %(id)s;"""
         return connectToMySQL(Ninja.DB).query_db(query, data)
 
     @classmethod
     def delete(cls, id):
-        query = "DELETE FROM dojos_and_ninjas_schema.ninjas WHERE id = %(id)s;"
+        query = "DELETE FROM ninjas WHERE id = %(id)s;"
         data = {'id': id}
         return connectToMySQL(Ninja.DB).query_db(query, data)
