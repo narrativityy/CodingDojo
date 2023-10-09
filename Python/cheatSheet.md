@@ -200,5 +200,5 @@ class Animal:
 8. Test to make sure server is working
 9. python3 server.py
 10. ```html
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     ```

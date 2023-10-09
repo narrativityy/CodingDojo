@@ -1,6 +1,5 @@
 from flask_app.models.model_users import User
-from flask_app import app
-from flask_bcrypt import Bcrypt
+from flask_app import app, bcrypt
 from flask import render_template, request, redirect, session, flash
 
 # CRUD
@@ -9,7 +8,7 @@ from flask import render_template, request, redirect, session, flash
 @app.post('/users/create')
 def create():
     # TODO do the logic for validating the form
-    if not User.validate(request.form):
+    if not User.validateReg(request.form):
         return redirect('/')
     
     # TODO hash the incoming password
@@ -18,15 +17,42 @@ def create():
         **request.form,
         'password': hash_password
     }
-    User.create_one(data)
-
-    # session['uuid'] = 
-    return redirect('/')
+    session['uuid'] = User.create_one(data)
+    print('*' * 20, session['uuid'])
+    return redirect('/dashboard')
 
 # READ
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/dashboard')
+def dashboard():
+    if not (session):
+        return redirect('/')
+    user = User.get_one(int(session['uuid']))
+    return render_template('dashboard.html', user = user)
+
+@app.route('/users/logout')
+def logout():
+    session.clear()
+    return redirect('/')
+
+@app.post('/users/login/process')
+def login():
+    data = {
+        **request.form
+    }
+    user = User.get_by_email(data['email'])
+    if not user or user == False:
+        flash("Invalid Email/Password", "err_users_login")
+        return redirect('/')
+    if not bcrypt.check_password_hash(user.password, data['password']):
+        flash("Invalid Email/Password", "err_users_login")
+        return redirect('/')
+    
+    session['uuid'] = user.id
+    return redirect('/dashboard')
 
 # @app.route('/get/<int:id>')
 # def get(id):
@@ -49,34 +75,3 @@ def index():
 # def delete(id):
 #     Animal.delete(id)
 #     return redirect('/')
-class User:
-
-    @staticmethod
-    def validate(data:dict) -> bool:
-        is_valid = True
-
-        if (len(data['first_name']) < 2):
-            flash('First Name is required', 'err_users_first_name')
-            is_valid = False
-
-        if (len(data['last_name']) < 2):
-            flash('Last Name is required', 'err_users_last_name')
-            is_valid = False
-
-        if (len(data['email']) < 2):
-            flash('Email is required', 'err_users_email')
-            is_valid = False
-
-        if (len(data['password']) < 8):
-            flash('Password is required, must be 8 characters or more', 'err_users_password')
-            is_valid = False
-
-        if (len(data['confirm_password']) < 8 ):
-            flash('Confirm Password is required, must be 8 characters or more', 'err_users_confirm_password')
-            is_valid = False
-
-        elif (data['password'] != data['confirm_password']):
-            flash('Password fields must match!', 'err_users_confirm_password')
-            is_valid = False
-
-        return is_valid
