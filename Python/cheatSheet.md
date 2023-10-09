@@ -1,7 +1,7 @@
 1. mkdir hello_flask
 2. cd hello_flask
 3. pip3 install pipenv
-4. pipenv install flask pymysql (whats in your env run: pip list)
+4. pipenv install flask pymysql flask-bcrypt (whats in your env run: pip list)
 5. python3 server.py
 6. create my file structure (MVC)
     1. Root folder (name of my project)
@@ -33,7 +33,7 @@ from flask_app import app
 from flask_app.controllers import controller_animal
 
 if __name__=="__main__":
-    app.run(debug=True, host='localhost')
+    app.run(debug=True, host='localhost', port=5001)
 ```
 
 ## mysqlconnection.py
@@ -46,7 +46,7 @@ class MySQLConnection:
         # change the user and password as needed
         connection = pymysql.connect(host = 'localhost',
                                     user = 'root', 
-                                    password = 'root', 
+                                    password = 'rootroot', 
                                     db = db,
                                     charset = 'utf8mb4',
                                     cursorclass = pymysql.cursors.DictCursor,
