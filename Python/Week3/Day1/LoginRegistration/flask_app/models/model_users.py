@@ -58,7 +58,7 @@ class User:
         results = connectToMySQL(User.DB).query_db(query, data)
 
         if not results:
-            return[]
+            return []
 
         return cls(results[0])
 
@@ -92,6 +92,10 @@ class User:
 
         elif not EMAIL_REGEX.match(data['email']):
             flash('Email is invalid', 'err_users_email')
+            is_valid = False
+
+        elif User.get_by_email(data['email']) != []:
+            flash('Email is already taken', 'err_users_email')
             is_valid = False
 
         if (len(data['password']) < 8):
