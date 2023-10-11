@@ -1,40 +1,66 @@
 from flask_app.models.model_users import User
-from flask_app import app
-from flask import render_template, request, redirect, session
+from flask_app import app, bcrypt
+from flask import render_template, request, redirect, session, flash
 
 # CRUD
 
 # CREATE
-@app.post('/add_animal')
-def add_animal():
-    print (request.form)
-    Animal.create_one(request.form)
+@app.post('/users/create')
+def create():
+    # TODO do the logic for validating the form
+    if not User.validateReg(request.form):
+        return redirect('/')
+    
+    # TODO hash the incoming password
+    hash_password = bcrypt.generate_password_hash(request.form['password'])
+    data = {
+        **request.form,
+        'password': hash_password
+    }
+    session['uuid'] = User.create_one(data)
+    print('*' * 20, session['uuid'])
+    return redirect('/recipes')
+
+
+@app.route('/users/logout')
+def logout():
+    session.clear()
     return redirect('/')
 
-# READ
-@app.route('/')
-def index():
-    animals = Animal.get_one(1)
-    return render_template('index.html', animals = animals)
+@app.post('/users/login/process')
+def login():
+    data = {
+        **request.form
+    }
+    user = User.get_by_email(data['email'])
+    if not user or user == False:
+        flash("Invalid Email/Password", "err_users_login")
+        return redirect('/')
+    if not bcrypt.check_password_hash(user.password, data['password']):
+        flash("Invalid Email/Password", "err_users_login")
+        return redirect('/')
+    
+    session['uuid'] = user.id
+    return redirect('/recipes')
 
-@app.route('/get/<int:id>')
-def get(id):
-    animal = Animal.get_one(id)
-    return animal.name
+# @app.route('/get/<int:id>')
+# def get(id):
+#     animal = Animal.get_one(id)
+#     return animal.name
 
 # UPDATE
-@app.route('/update')
-def update():
-    return render_template('update.html')
+# @app.route('/update')
+# def update():
+#     return render_template('update.html')
 
-@app.post('/update/submit')
-def submit_update():
-    data = request.form
-    Animal.update(data)
-    return redirect('/')
+# @app.post('/update/submit')
+# def submit_update():
+#     data = request.form
+#     Animal.update(data)
+#     return redirect('/')
 
 # DELETE
-@app.route('/delete/<int:id>')
-def delete(id):
-    Animal.delete(id)
-    return redirect('/')
+# @app.route('/delete/<int:id>')
+# def delete(id):
+#     Animal.delete(id)
+#     return redirect('/')

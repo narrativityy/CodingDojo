@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+}
+
+label {
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.error {
+    padding: 0px;
+    margin: 0px;
+}
+
+#login {
+    background-color: #006A4E;
+    padding: 20px;
+    border: solid white 2px;
+    border-radius: 2%;
+}
+
+#register {
+    background-color: #006A4E;
+    padding: 20px;
+    border: solid white 2px;
+    border-radius: 2%;
+}
