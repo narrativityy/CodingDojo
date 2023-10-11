@@ -17,9 +17,19 @@ def recipes_dashboard():
 @app.route('/recipes/<int:id>')
 def view_recipe(id):
     recipe = Recipe.get_one_with_users(id)
+    user = User.get_one(session['uuid'])
+    if session:
+        return render_template('view_recipe.html', user = user ,recipe = recipe)
+    return redirect('/recipes')
+
+
+@app.route('/recipes/delete/<int:id>')
+def delete_recipe(id):
+    recipe = Recipe.get_one_with_users(id)
     if recipe.user.id == session['uuid']:
-        return render_template('view_recipe.html', recipe = recipe)
-    return render_template('/recipes')
+        Recipe.delete(id)
+        return redirect('/recipes')
+    return redirect('/recipes')
 
 
 @app.route('/recipes/edit/<int:id>')
@@ -27,7 +37,7 @@ def edit_recipe(id):
     recipe = Recipe.get_one_with_users(id)
     if recipe.user.id == session['uuid']:
         return render_template('edit_recipe.html', recipe = recipe)
-    return render_template('/recipes')
+    return redirect('/recipes')
 
 
 @app.post('/recipes/edit/process')
