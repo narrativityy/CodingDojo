@@ -27,13 +27,18 @@ const arrTest = [4, 5, 1, 3, 6, 7, 10, 2, 8, 9]
 
 function selectionSort(arr){
     for (let i = 0; i < arr.length; i++) {
+        // setting minInd to i
         let minInd = i
         for (let j = 0 + i; j < arr.length; j++) {
+            // if arr at minIdx is less than arr at j set minIdx equal to j
             if (arr[minInd] > arr[j])
                 minInd = j
         }
+        // setting temp var to arr at position i
         let temp = arr[i]
+        // setting arr at position i to arr at position minIdx
         arr[i] = arr[minInd]
+        // setting arr at minInd to temp var
         arr[minInd] = temp
     }
     return arr
