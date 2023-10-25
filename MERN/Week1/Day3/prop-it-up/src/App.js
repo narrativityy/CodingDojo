@@ -29,7 +29,9 @@ function App() {
   const people = [person1, person2, person3, person4]
   return (
     <div className='App'>
-      <PersonCard people={people}/>
+      {people.map((person) => {
+        return <PersonCard person={person}/>
+      })}
     </div>
   );
 }
