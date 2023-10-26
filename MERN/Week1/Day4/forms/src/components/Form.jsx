@@ -1,34 +1,55 @@
 import React, { useState } from 'react'
+import Display from './Display'
 
 const Form = (props) => {
 
-  // CREATE STATE VARS for this component / for the inputs
-  const [animal, setAnimal] = useState('')
-  const [zoo, setZoo] = useState([])
+  const [carModel, setCarModel] = useState('')
+  const [hp, setHp] = useState(100)
+  const [color, setColor] = useState('blue')
+  const [carList, setCarList] = useState([
+    {carModel: 'Nissan', hp: 100, color: 'red'}, 
+    {carModel: 'Audi', hp: 335, color: 'blue'}])
 
-  // form submit function
-  const createAnimal = (e) => {
+  const submitHandler = (e) => {
     e.preventDefault()
-    setZoo([...zoo, animal])
-    setAnimal('')
+
+    const carObj = {
+      carModel,
+      hp: Number(hp),
+      color
+    }
+    setCarList([...carList, carObj])
+
+    setCarModel('')
+    setHp(100)
+    setColor('blue')
   }
 
   return (
     <fieldset>
       <legend>Form.jsx</legend>
-      {JSON.stringify(animal)}
-      <br />
-      {JSON.stringify(zoo)}
 
-      <form onSubmit={createAnimal}>
-        <p>enter animal emoji: <input onChange={ (e) => setAnimal(e.target.value) } value={animal}/></p>
-        <button>Create</button>
+      <form onSubmit={submitHandler}>
+        <div>
+          <label>Car Model: </label>
+          <input type="text" onChange={(e) => setCarModel(e.target.value)} value={carModel} />
+        </div>
+        <div>
+          <label >HP: </label>
+          <input type="text" onChange={(e) => setHp(e.target.value)} value={hp} />
+        </div>
+        <div>
+          <label>Color: </label>
+          <input type="color" onChange={(e) => setColor(e.target.value)} value={color} />
+        </div>
+
+        <br />
+        <button>Create Car</button>
       </form>
 
       <hr />
-      {zoo.map( (elem, ind) => {
-        return (<li key={ind}>{elem}</li>)
-      })}
+
+      <Display carList={carList} />
     </fieldset>
   )
 }
