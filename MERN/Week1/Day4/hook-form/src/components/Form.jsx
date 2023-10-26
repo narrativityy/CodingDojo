@@ -12,10 +12,6 @@ const Form = (props) => {
     setFirstName(e.target.value)
   }
 
-  const validateFirstName = () => {
-    firstName.length < 2 && <p>First Name must be at least 2 characters</p>
-  }
-
   const createLastName = (e) => {
     setLastName(e.target.value)
   }
