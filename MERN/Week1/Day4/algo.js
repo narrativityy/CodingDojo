@@ -41,13 +41,23 @@
 
 function insertionSort(arr) {
     for (let i = 1; i < arr.length; i++) {
+        // setting temp variable to arr[i]
         let temp = arr[i]
+        // checking if temp is less than the value before it in the array
         if (temp < arr[i - 1]) {
+            // if true running the inner for loop || start inner loop at position i and work backwards
             for (let j = i; j >= 0; j--) {
-                if (temp < arr[j - 1])
+                // checking if temp is less than the number before it in array
+                if (temp < arr[j - 1]) {
+                    // setting arr[j] to the number before it in array
                     arr[j] = arr[j - 1]
-                else 
+                }
+                else {
+                    // setting arr[j] to temp
                     arr[j] = temp
+                    // breaking from for loop
+                    break
+                }
             }
         }
     }
