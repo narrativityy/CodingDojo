@@ -1,29 +1,17 @@
 import './App.css';
-import {useState} from 'react'
-import axios from 'axios'
+import {Routes, Route, useNavigate} from "react-router-dom";
+import People from './components/People';
+import Planets from './components/Planets';
+import Starships from './components/Starships'
+import Error from './components/Error';
 
 function App() {
 
-  const [searchResults, setSearchResults] = useState({})
+  const navigate = useNavigate()
 
   const search = (e) => {
     e.preventDefault()
-    const url = `https://swapi.dev/api/${e.target[0].value}/${e.target[1].value}`
-    axios.get(url).then(response => {
-      setSearchResults(response.data)
-    })
-  }
-
-  const Display = (props) => {
-    const {searchResults} = props
-    if (JSON.stringify(searchResults) === '{}')
-      return
-    return (
-      <div>
-        <p>Name: {searchResults.name}</p>
-        <p>Height: </p>
-      </div>
-    )
+    navigate(`/${e.target[0].value}/${e.target[1].value}`)
   }
 
   return (
@@ -39,7 +27,12 @@ function App() {
         <input type="number" name="id" id="id" />
         <button>Search</button>
       </form>
-      <Display searchResults={searchResults}/>
+      <Routes>
+        <Route path='/people/:id' element={<People />} />
+        <Route path='/planets/:id' element={<Planets />} />
+        <Route path='/starships/:id' element={<Starships />} />
+        <Route path='/error' element={<Error />} />
+      </Routes>
     </div>
   );
 }
