@@ -1,36 +1,31 @@
+import './App.css'
 import React from "react";
-import {
-  Link,
-  Routes,
-  Route
-} from "react-router-dom";
+import {Link, Routes, Route} from "react-router-dom";
 import { useParams } from "react-router";
-import Survey from "./components/Survey";
-    
-const Location = (props) => { 
-  const { city } = useParams(); // matches our :city in our Routes
-    
-  return (
-    <h1>Welcome to { city }!</h1>
-  );
-}
-    
+import Hero from "./components/Hero";
+import Form from './components/Form';
+import ErrorPage from './components/ErrorPage';
+
 function App() {
   return (
-    <div>
-      <p>
-        <Link to="/location/seattle">Seattle</Link>
-        |
-        <Link to="/location/chicago">Chicago</Link>
-        |
-        <Link to="/location/burbank">Burbank</Link>
-      </p>
+    <div className='App'>
+      <h1>routing with heroes🦸</h1>
+      <Link to='/hero/1'>go to hero page</Link>
+      <Link to='/hero/form'>FORM</Link>
+      <hr />
       <Routes>
-        <Route path="/location/:city" element={<Location />}/>
+        {/* HERO */}
+        <Route path='/hero/:heroId' element={<Hero />} />
+
+        {/* FORM */}
+        <Route path='/hero/form' element={<Form />} />
+
+        {/* ERROR */}
+        <Route path='/error' element={<ErrorPage />} />
+
       </Routes>
-      <Survey />
     </div>
   );
 }
-    
+
 export default App;
