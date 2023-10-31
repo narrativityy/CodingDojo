@@ -32,18 +32,20 @@ const squareMatrix1 = [
   
   
 function diagonalDifference(sqrMatrix) {
-  let sumA = 0
-  let sumB = 0
+    // initializing sum variables and set them to 0
+    let sumA = 0
+    let sumB = 0
 
-  for (let i = 0; i < sqrMatrix.length; i++) {
-      sumA += sqrMatrix[i][i]
-  }
+    // start our first for loop that iterates through the array length
+    for (let i = 0; i < sqrMatrix.length; i++) {
+        // add value from position [i][i] to sumA
+        sumA += sqrMatrix[i][i]
+        // add value from position [i][(Array.length - 1) - i] to sumA
+        sumB += sqrMatrix[i][(sqrMatrix.length - 1) - i]
+    }
 
-  for (let i = 0; i < sqrMatrix.length; i++) {
-      sumB += sqrMatrix[i][(sqrMatrix.length - 1) - i]
-  }
-
-  return Math.abs(sumA - sumB)
+    // return the absolute value of sumA - sumB
+    return Math.abs(sumA - sumB)
 }
 
 console.log(diagonalDifference(squareMatrix1))
