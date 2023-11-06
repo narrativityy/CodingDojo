@@ -1,5 +1,2 @@
-PORT=8001
-DB=products
-# mongo atlas connection
-ATLAS_USERNAME=admin
-ATLAS_PASSWORD=root
+/node_modules
+.env
