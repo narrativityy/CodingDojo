@@ -34,7 +34,7 @@ const Products = (props) => {
             <p>Price: ${elem.price}</p>
             <p>Description: {elem.description}</p>
             <Link to={`/products/edit/${elem._id}`}><p>Edit</p></Link>
-            <button onClick={deletePerson(elem._id)}>Delete</button>
+            <button onClick={() => deletePerson(elem._id)}>Delete</button>
             <hr />
           </div>
         )

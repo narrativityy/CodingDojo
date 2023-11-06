@@ -13,9 +13,12 @@ function App() {
     <div className="App">
       <h1>Product Manager</h1>
       <Link to='/'><p>Home</p></Link>
+      <Link to='/products/create'><p>Create Product</p></Link>
 
       <Routes>
-        <Route path='/' element={<div><Form /> <Products /></div>} />
+        <Route path='/' element={<Products />} />
+
+        <Route path='/products/create' element={<Form />} />
         
         <Route path='/products/:id' element={<Product />} />
 

@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
-const Form = () => {
+const Form = (props) => {
+
+  const navigate = useNavigate()
 
   const [title, setTitle] = useState('')
   const [price, setPrice] = useState(null)
@@ -14,7 +17,10 @@ const Form = () => {
       price,
       description
     })
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res)
+        navigate('/')
+      })
       .catch(err => console.log(err))
   }
 
