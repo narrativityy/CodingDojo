@@ -19,11 +19,15 @@ const OneMovie = () => {
 
   return (
     <div>
-      <p>{movie.title}</p>
-      <img width="200px" src={movie.image} alt="Movie Poster" />
-      <p>Released: {movie.releaseYear}</p>
-      <p>Have you seen this? {movie.seen ? "yes" : "no"}</p>
-      <hr />
+      {movie ? (
+        <div>
+          <p>{movie.title}</p>
+          <img width="200px" src={movie.image} alt="Movie Poster" />
+          <p>Released: {movie.releaseYear}</p>
+          <p>Have you seen this? {movie.seen ? "yes" : "no"}</p>
+        </div>
+      ) : <p>loading...</p>}
+
     </div>
   )
 }
