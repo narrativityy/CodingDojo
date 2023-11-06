@@ -54,7 +54,6 @@ function findObjectsFilter(searchObj, items) {
             if (searchObj[key] === item[key])
                 count++
         }
-
         if (count == searchObjLen)
             answerArr.push(item)
     }
