@@ -1,6 +1,9 @@
 import './App.css';
 import {Routes, Route, Link, Navigate} from 'react-router-dom'
 import Dashboard from './components/Dashboard';
+import ShowOne from './components/ShowOne';
+import Create from './components/Create';
+import Update from './components/Update';
 
 function App() {
   return (
@@ -16,6 +19,15 @@ function App() {
 
         {/* MAIN DASHBOARD */}
         <Route path='/notes' element={<Dashboard />} />
+
+        {/* SHOW ONE */}
+        <Route path='/notes/:id' element={<ShowOne />} />
+
+        {/* CREATE */}
+        <Route path='/notes/create' element={<Create />} />
+
+        {/* UPDATE */}
+        <Route path='/notes/update/:id' element={<Update/>} />
 
       </Routes>
     </div>

@@ -25,7 +25,7 @@ module.exports.createNewNote = (req, res) => {
             res.json(newlyCreatedNote)
         })
         .catch((err) => {
-            res.json(err)
+            res.status(400).json(err)
         });}
  
 module.exports.updateExistingNote = (req, res) => {
