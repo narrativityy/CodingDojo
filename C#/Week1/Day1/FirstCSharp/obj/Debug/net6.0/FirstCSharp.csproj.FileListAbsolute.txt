@@ -1,0 +1,15 @@
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/bin/Debug/net6.0/FirstCSharp
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/bin/Debug/net6.0/FirstCSharp.deps.json
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/bin/Debug/net6.0/FirstCSharp.runtimeconfig.json
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/bin/Debug/net6.0/FirstCSharp.dll
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/bin/Debug/net6.0/FirstCSharp.pdb
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/obj/Debug/net6.0/FirstCSharp.csproj.AssemblyReference.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/obj/Debug/net6.0/FirstCSharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/obj/Debug/net6.0/FirstCSharp.AssemblyInfoInputs.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/obj/Debug/net6.0/FirstCSharp.AssemblyInfo.cs
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/obj/Debug/net6.0/FirstCSharp.csproj.CoreCompileInputs.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/obj/Debug/net6.0/FirstCSharp.dll
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/obj/Debug/net6.0/refint/FirstCSharp.dll
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/obj/Debug/net6.0/FirstCSharp.pdb
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/obj/Debug/net6.0/FirstCSharp.genruntimeconfig.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/FirstCSharp/obj/Debug/net6.0/ref/FirstCSharp.dll
