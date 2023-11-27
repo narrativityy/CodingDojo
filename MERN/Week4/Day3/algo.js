@@ -64,12 +64,12 @@ function canBecomePalindrome(str) {
     // for loop to populate charCount variable
     for (let i = 0; i < str.length; i++) {
         // if there is to value at key location set it to 1
-        if (charCount[str.charAt(i)] === undefined) {
-            charCount[str.charAt(i)] = 1
+        if (charCount[str[i]] === undefined) {
+            charCount[str[i]] = 1
         }
         // else add 1 to the previous count
         else {
-            charCount[str.charAt(i)] += 1
+            charCount[str[i]] += 1
         }
     }
 
