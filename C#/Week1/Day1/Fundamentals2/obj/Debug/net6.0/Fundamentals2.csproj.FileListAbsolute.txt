@@ -1,0 +1,15 @@
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/bin/Debug/net6.0/Fundamentals2
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/bin/Debug/net6.0/Fundamentals2.deps.json
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/bin/Debug/net6.0/Fundamentals2.runtimeconfig.json
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/bin/Debug/net6.0/Fundamentals2.dll
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/bin/Debug/net6.0/Fundamentals2.pdb
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/obj/Debug/net6.0/Fundamentals2.csproj.AssemblyReference.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/obj/Debug/net6.0/Fundamentals2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/obj/Debug/net6.0/Fundamentals2.AssemblyInfoInputs.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/obj/Debug/net6.0/Fundamentals2.AssemblyInfo.cs
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/obj/Debug/net6.0/Fundamentals2.csproj.CoreCompileInputs.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/obj/Debug/net6.0/Fundamentals2.dll
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/obj/Debug/net6.0/refint/Fundamentals2.dll
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/obj/Debug/net6.0/Fundamentals2.pdb
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/obj/Debug/net6.0/Fundamentals2.genruntimeconfig.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day1/Fundamentals2/obj/Debug/net6.0/ref/Fundamentals2.dll
