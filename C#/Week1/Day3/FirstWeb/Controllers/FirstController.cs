@@ -36,4 +36,35 @@ public class FirstController : Controller {
         return "Oops! This page does not exist.";
     }
 
+    [HttpGet("formview")]
+    public ViewResult FormView() {
+        return View();
+    }
+
+    // [HttpPost("submitform")]
+    // public RedirectResult SubmitForm(string Name, string Animal) {
+    //     Console.WriteLine($"Submitted Data : Name : {Name} - Animal : {Animal}");
+    //     return Redirect("formview");
+    // }
+
+    // [HttpPost("submitform")]
+    // public RedirectToActionResult SubmitForm(string Name, string Animal) {
+    //     Console.WriteLine($"Submitted Data : Name : {Name} - Animal : {Animal}");
+    //     return RedirectToAction("formview");
+    // }
+
+    [HttpPost("submitform")]
+    public IActionResult SubmitForm(string Name, string Animal) {
+
+        if (Animal == "Red Panda") {
+            return View("RedPanda");
+        }
+
+        ViewBag.Name = Name;
+        ViewBag.Animal = Animal;
+
+        Console.WriteLine($"Submitted Data : Name : {Name} - Animal : {Animal}");
+        return View("FormResult");
+    }
+
 }
