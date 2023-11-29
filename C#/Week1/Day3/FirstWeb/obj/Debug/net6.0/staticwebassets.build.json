@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "ynd7cViTYt35INNIg86Wo36dWLLXN4vpNr0IJ4Nk4ck=",
+  "Source": "FirstWeb",
+  "BasePath": "_content/FirstWeb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FirstWeb/wwwroot",
+      "Source": "FirstWeb",
+      "ContentRoot": "/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day3/FirstWeb/wwwroot/",
+      "BasePath": "_content/FirstWeb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day3/FirstWeb/wwwroot/imgs/redpanda.jpg",
+      "SourceId": "FirstWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jakecrowley/Desktop/CodingDojo/C#/Week1/Day3/FirstWeb/wwwroot/",
+      "BasePath": "_content/FirstWeb",
+      "RelativePath": "imgs/redpanda.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/imgs/redpanda.jpg"
+    }
+  ]
+}
