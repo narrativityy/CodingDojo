@@ -1,14 +1,22 @@
-﻿MeleeFighter melee = new MeleeFighter("Melee Fighter");
-RangedFighter ranged = new RangedFighter("Ranged Fighter");
-MagicCaster mage = new MagicCaster("Magic Caster");
+﻿using System.Net.Security;
 
-melee.PerformAttack(ranged, melee.AttackList[1]);
-melee.Rage(mage);
+Console.Write("What is your name? ");
+string Name = Console.ReadLine();
 
-ranged.PerformAttack(melee, ranged.AttackList[0]);
-ranged.Dash();
-ranged.PerformAttack(melee, ranged.AttackList[0]);
+Console.WriteLine("1. Melee Fighter");
+Console.WriteLine("2. Ranged Fighter");
+Console.WriteLine("3. Mage");
+Console.Write($"Hello {Name}, which character would you like to play? ");
+int Character = Console.Read();
 
-mage.PerformAttack(melee, mage.AttackList[0]);
-mage.Heal(ranged);
-mage.Heal(mage);
+if (Character == 1) {
+    MeleeFighter Player = new MeleeFighter(Name);
+}
+else if (Character == 2) {
+    RangedFighter Player = new RangedFighter(Name);
+}
+else {
+    MagicCaster Player = new MagicCaster(Name);
+}
+
+Console.WriteLine($"Thanks for choosing a character. ");
