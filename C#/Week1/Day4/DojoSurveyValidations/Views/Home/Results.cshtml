@@ -1,0 +1,32 @@
+@model Survey
+
+@{
+    ViewData["Title"] = "Results";
+}
+
+<div class="d-flex justify-content-center align-items-center py-3">
+    <div class="text-center">
+        <h1>Submitted Info</h1>
+        <Table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td>Name: </td>
+                    <td>@Model.Name</td>
+                </tr>
+                <tr>
+                    <td>Dojo Location: </td>
+                    <td>@Model.Location</td>
+                </tr>
+                <tr>
+                    <td>Favorite Language: </td>
+                    <td>@Model.FavoriteLanguage</td>
+                </tr>
+                <tr>
+                    <td>Comment (optional): </td>
+                    <td>@Model.Comment</td>
+                </tr>
+            </tbody>
+        </Table>
+        <h5><a class="btn btn-outline-dark" href="/">Go Back</a></h5>
+    </div>
+</div>
