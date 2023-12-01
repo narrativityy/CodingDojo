@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Results";
+}
+
+<div class="text-center">
+    <div class="d-flex justify-content-between align-items-center mt-3 px-3">
+        <h3>Welcome @Context.Session.GetString("Name")</h3>
+        <a asp-action="Logout"><h3>Log Out</h3></a>
+    </div>
+    <hr>
+    <div class="d-flex justify-content-center align-items-center">
+        <div>
+            <h2>@Context.Session.GetInt32("Counter")</h2>
+            <a asp-action="Add1"><h3 class=" p-5 btn btn-outline-dark">+1</h3></a>
+            <a asp-action="Subtract1"><h3 class=" p-5 btn btn-outline-dark">-1</h3></a>
+            <br>
+            <a asp-action="Multiply2"><h3 class=" p-5 btn btn-outline-dark">x1</h3></a>
+            <a asp-action="AddRandom"><h3 class=" p-5 btn btn-outline-dark">+ Random</h3></a>
+        </div>
+    </div>
+</div>
