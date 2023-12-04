@@ -1,0 +1,15 @@
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/bin/Debug/net6.0/Eruption
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/bin/Debug/net6.0/Eruption.deps.json
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/bin/Debug/net6.0/Eruption.runtimeconfig.json
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/bin/Debug/net6.0/Eruption.dll
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/bin/Debug/net6.0/Eruption.pdb
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/obj/Debug/net6.0/Eruption.csproj.AssemblyReference.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/obj/Debug/net6.0/Eruption.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/obj/Debug/net6.0/Eruption.AssemblyInfoInputs.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/obj/Debug/net6.0/Eruption.AssemblyInfo.cs
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/obj/Debug/net6.0/Eruption.csproj.CoreCompileInputs.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/obj/Debug/net6.0/Eruption.dll
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/obj/Debug/net6.0/refint/Eruption.dll
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/obj/Debug/net6.0/Eruption.pdb
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/obj/Debug/net6.0/Eruption.genruntimeconfig.cache
+/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day1/Eruption/obj/Debug/net6.0/ref/Eruption.dll
