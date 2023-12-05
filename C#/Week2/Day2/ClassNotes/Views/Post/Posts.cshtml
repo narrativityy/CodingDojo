@@ -1,0 +1,20 @@
+@model List<Post>
+@{
+    ViewData["Title"] = "New Post";
+}
+
+@foreach (Post post in Model) {
+    <div class="text-center p-3 m-3 shadow">
+        <p>Topic: @post.Topic | Posted At: @post.CreatedAt.ToString()</p>
+        <p>Body: @post.Body</p>
+        <img width="400px" src="@post.ImgURL" alt="@post.Topic">
+
+        <div class="d-flex justify-content-center gap-1">
+            <a class="btn btn-secondary mt-3" asp-action="ViewPost" asp-controller="Post" asp-route-PostId="@post.PostId">View Post</a>
+            <a class="btn btn-warning mt-3" asp-action="EditPost" asp-controller="Post" asp-route-PostId="@post.PostId">Edit</a>
+            <form asp-action="DeletePost" asp-controller="Post" asp-route-PostId="@post.PostId" method="post">
+                <input class="btn btn-danger mt-3" type="submit" value="Delete">
+            </form>
+        </div>
+    </div>
+}

@@ -1,0 +1,29 @@
+@model Dish
+
+@{
+    ViewData["Title"] = "New Dish";
+}
+
+<form asp-controller="Dish" asp-action="CreateDish" method="post">
+    <div>
+        <label asp-for="Name">Name: </label>
+        <input asp-for="Name">
+    </div>
+    <div>
+        <label asp-for="Chef">Chef: </label>
+        <input asp-for="Chef">
+    </div>
+    <div>
+        <label asp-for="Tastiness">Tastiness: </label>
+        <input asp-for="Tastiness">
+    </div>
+    <div>
+        <label asp-for="Calories">Calories: </label>
+        <input asp-for="Calories">
+    </div>
+    <div>
+        <label asp-for="Description">Description: </label>
+        <input asp-for="Description">
+    </div>
+    <button class="mt-2 btn btn-outline-dark" type="submit">Create</button>
+</form>

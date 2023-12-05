@@ -1,0 +1,23 @@
+@model Post
+@{
+    ViewData["Title"] = "New Post";
+}
+
+<div class="text-center shadow">
+    <h1>Create a Post</h1>
+    <form asp-action="CreatePost" asp-controller="Post" method="post">
+        <div>
+            <label asp-for="Topic">Topic: </label>
+            <input asp-for="Topic"></input>
+        </div>
+        <div>
+            <label asp-for="Body">Body: </label>
+            <input asp-for="Body">
+        </div>
+        <div>
+            <label asp-for="ImgURL">Image: </label>
+            <input asp-for="ImgURL">
+        </div>
+        <button class="btn btn-outline-dark" type="submit">Submit</button>
+    </form>
+</div>
