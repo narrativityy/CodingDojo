@@ -59,7 +59,7 @@ public class DishController : Controller
             return RedirectToAction("Index");
         }
 
-        return View("EditPost", OneDish);
+        return View("EditDish", OneDish);
     }
 
     [HttpPost("dishes/{id}/update")]

@@ -15,8 +15,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day2/CRUDelicious
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day2/CRUDelicious/Views/Dish/EditPost.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzaC9FZGl0UG9zdC5jc2h0bWw=
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day2/CRUDelicious/Views/Dish/EditDish.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzaC9FZGl0RGlzaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day2/CRUDelicious/Views/Dish/Index.cshtml]
