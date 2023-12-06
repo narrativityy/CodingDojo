@@ -1,0 +1,10 @@
+@model Post
+@{
+    ViewData["Title"] = $"View {Model.Topic}";
+}
+
+<div class="text-center p-3 m-3 shadow">
+    <p>Topic: @Model.Topic</p>
+    <p>Body: @Model.Body</p>
+    <img width="400px" src="@Model.ImgURL" alt="@Model.Topic">
+</div>
