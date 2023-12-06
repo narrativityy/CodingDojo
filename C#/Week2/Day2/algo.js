@@ -200,36 +200,34 @@ class BinarySearchTree {
      * @returns {BinarySearchTree} This tree.
      */
     insert(newVal) {
-        let newNode = new BSTNode(newVal)
-        if (this.root === null) {
-            this.root = newNode
-            return this
+        const node = new BSTNode(newVal);
+
+        if (this.isEmpty()) {
+          this.root = node;
+          return this;
         }
 
-        let current = this.root
-        let previous = null
+        let current = this.root;
+      // Note: while(true) is risky, but it's safe to use as long as we have return cases for all of our logic. That way the loop can interrupt without infinite looping. 
         while (true) {
-            if (current.data === newVal) {
-                return this
+          if (newVal <= current.data) {
+            if (current.left === null) {
+              current.left = node;
+              return this;
             }
-            if (current.data > newVal) {
-                previous = current
-                current = current.left
-            }
-            else {
-                previous = current
-                current = current.right
-            }
-        }
 
-        if (newVal < previous.data) {
-            previous.left = newNode
+            current = current.left;
+          } else {
+            // newVal is greater than current.data
+            if (current.right === null) {
+              current.right = node;
+              return this;
+            }
+
+            current = current.right;
+          }
         }
-        else {
-            previous.right = newNode
-        }
-        return this
-    }
+      }
 
     /**
      * Inserts a new node with the given newVal in the right place to preserver
