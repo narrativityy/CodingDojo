@@ -5,69 +5,72 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Posts
 build_property.RootNamespace = Posts
-build_property.ProjectDir = c:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week2\Posts\
+build_property.ProjectDir = /Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day4/Posts/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week2\Posts
+build_property.MSBuildProjectDirectory = /Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day4/Posts
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/Post/AllPosts.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxBbGxQb3N0cy5jc2h0bWw=
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/Post/AllPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9BbGxQb3N0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/Post/EditPost.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxFZGl0UG9zdC5jc2h0bWw=
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/Post/EditPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9FZGl0UG9zdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/Post/NewPost.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxOZXdQb3N0LmNzaHRtbA==
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/Post/NewPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9OZXdQb3N0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/Post/ViewPost.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxWaWV3UG9zdC5jc2h0bWw=
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/Post/ViewPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9WaWV3UG9zdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/Shared/_LoginLayout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbkxheW91dC5jc2h0bWw=
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/Shared/_LoginLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/User/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/User/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcml2YWN5LmNzaHRtbA==
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/User/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/User/_Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfTG9naW4uY3NodG1s
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/User/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Qcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/User/_Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfUmVnaXN0ZXIuY3NodG1s
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/User/_Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9fTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/User/_Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9fUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week2/Posts/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-ugjnhy4yi5
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jakecrowley/Desktop/CodingDojo/C\#/Week2/Day4/Posts/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-p89v1cnu7q

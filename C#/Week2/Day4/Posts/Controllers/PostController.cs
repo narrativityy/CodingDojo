@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Posts.Models;
 
 namespace Posts.Controllers;
@@ -34,6 +35,8 @@ public class PostController : Controller
             return View("NewPost");
         }
 
+        newPost.UserId = (int) HttpContext.Session.GetInt32("UserId");
+
         _context.Posts.Add(newPost);
         // _context.Add(newPost);
         //! SAVE CHANGES TO THE DB, OR IT WON'T BE PERMANENT!
@@ -51,8 +54,8 @@ public class PostController : Controller
     [HttpGet("posts")]
     public ViewResult AllPosts()
     {
-
-        List<Post> PostsFromDb = _context.Posts.OrderByDescending(p => p.CreatedAt).ToList();
+        List<Post> PostsFromDb = _context.Posts.Include(p => p.Creator).OrderByDescending(p => p.CreatedAt).ToList();
+        // List<Post> PostsFromDb = _context.Posts.OrderByDescending(p => p.CreatedAt).ToList();
 
         return View("AllPosts", PostsFromDb);
     }
@@ -62,7 +65,7 @@ public class PostController : Controller
     [HttpGet("posts/{postId}")]
     public IActionResult ViewPost(int postId)
     {
-        Post? OnePost = _context.Posts.FirstOrDefault(p => p.PostId == postId);
+        Post? OnePost = _context.Posts.Include(p => p.Creator).FirstOrDefault(p => p.PostId == postId);
 
         if (OnePost == null)
         {
@@ -80,7 +83,7 @@ public class PostController : Controller
     {
         Post? PostToDelete = _context.Posts.SingleOrDefault(p => p.PostId == postId);
 
-        if (PostToDelete != null)
+        if (PostToDelete != null && (int)HttpContext.Session.GetInt32("UserId") == PostToDelete.UserId)
         {
             _context.Remove(PostToDelete);
 

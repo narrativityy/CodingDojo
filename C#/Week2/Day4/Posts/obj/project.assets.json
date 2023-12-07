@@ -781,27 +781,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\seren\\.nuget\\packages\\": {}
+    "/Users/jakecrowley/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week2\\Posts\\Posts.csproj",
+      "projectUniqueName": "/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day4/Posts/Posts.csproj",
       "projectName": "Posts",
-      "projectPath": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week2\\Posts\\Posts.csproj",
-      "packagesPath": "C:\\Users\\seren\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week2\\Posts\\obj\\",
+      "projectPath": "/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day4/Posts/Posts.csproj",
+      "packagesPath": "/Users/jakecrowley/.nuget/packages/",
+      "outputPath": "/Users/jakecrowley/Desktop/CodingDojo/C#/Week2/Day4/Posts/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\seren\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/jakecrowley/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -850,7 +847,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.417/RuntimeIdentifierGraph.json"
       }
     }
   }
