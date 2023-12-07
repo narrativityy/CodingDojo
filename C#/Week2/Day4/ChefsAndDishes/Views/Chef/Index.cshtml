@@ -1,0 +1,29 @@
+@model List<Chef>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="d-flex justify-content-center align-items-center text-center">
+    <div>
+        <h2>Check out our roster of chefs!</h2>
+        <hr>
+        <table class="table">
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th># of Dishes</th>
+            </thead>
+            <tbody>
+                @foreach (Chef chef in Model) {
+                    int Age = DateTime.Now.Year - chef.DateOfBirth.Year;
+                    <tr>
+                        <td>@chef.FirstName @chef.LastName</td>
+                        <td>@Age</td>
+                        <td>@chef.AllDishes.Count</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
