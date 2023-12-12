@@ -1,0 +1,20 @@
+@model Product
+@{
+    ViewData["Title"] = "View Product";
+}
+
+<div class="text-center">
+    <h3>@Model.Name</h3>
+    <div class="d-flex justify-content-around align-items-top">
+        <div>
+            <h4>Categories</h4>
+            @foreach (ProductCategory pc in Model.ProductCategories) {
+                <p>@pc.Category.Name</p>
+            }
+        </div>
+        <div>
+            <h4>Add Category</h4>
+            @await Html.PartialAsync("_AddCategory", new ProductCategory(){ProductId = Model.ProductId})
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+@model ProductCategory
+
+<form asp-controller="ProductCategory" asp-action="AddProductCategory">
+    <input type="hidden" asp-for="ProductId" value="@Model.ProductId">
+    <select asp-for="CategoryId">
+        @foreach (Category category in ViewBag.Categories) {
+            <option value="@category.CategoryId">@category.Name</option>
+        }
+    </select>
+    <button class="btn btn-outline-dark" type="submit">Add</button>
+</form>

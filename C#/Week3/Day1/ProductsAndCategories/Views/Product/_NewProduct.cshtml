@@ -1,0 +1,19 @@
+@model Product
+
+<div>
+    <form asp-controller="Product" asp-action="CreateProduct">
+        <div>
+            <label asp-for="Name">Name: </label>
+            <input asp-for="Name">
+        </div>
+        <div class="mt-2">
+            <label asp-for="Description">Description: </label>
+            <input asp-for="Description">
+        </div>
+        <div class="mt-2">
+            <label asp-for="Price">Price: </label>
+            <input asp-for="Price">
+        </div>
+        <button class="btn btn-outline-dark mt-2" type="submit">Create</button>
+    </form>
+</div>
