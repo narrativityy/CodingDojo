@@ -1,0 +1,10 @@
+@model Wedding
+
+<div class="text-center">
+    <h2>@Model.WedderOne & @Model.WedderTwo's Wedding</h2>
+    <h5>Date: @Model.CreatedAt</h5>
+    <h5>Guests: </h5>
+    @foreach (UserWeddingRSVP rsvp in Model.UserRSVPs) {
+        <p>@rsvp.RSVPedBy.FirstName @rsvp.RSVPedBy.LastName</p>
+    }
+</div>

@@ -1,0 +1,8 @@
+﻿@{
+    Layout = "_LoginLayout";
+}
+
+<div class="d-flex justify-content-around align-items-top text-center mt-3">
+    @await Html.PartialAsync("_Register", new User())
+    @await Html.PartialAsync("_Login", new LogUser())
+</div>

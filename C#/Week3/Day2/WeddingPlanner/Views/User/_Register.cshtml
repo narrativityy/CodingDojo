@@ -1,0 +1,38 @@
+@model User
+
+<div>
+    <h1>Register</h1>
+    <form asp-controller="User" asp-action="Register" method="post">
+        <div>
+            <label asp-for="FirstName">First Name: </label>
+            <input asp-for="FirstName">
+            <br>
+            <span class="text-danger" asp-validation-for="FirstName"></span>
+        </div>
+        <div class="mt-2">
+            <label asp-for="LastName">Last Name: </label>
+            <input asp-for="LastName">
+            <br>
+            <span class="text-danger" asp-validation-for="LastName"></span>
+        </div>
+        <div class="mt-2">
+            <label asp-for="Email">Email: </label>
+            <input asp-for="Email">
+            <br>
+            <span class="text-danger" asp-validation-for="Email"></span>
+        </div>
+        <div class="mt-2">
+            <label asp-for="Password">Password: </label>
+            <input asp-for="Password">
+            <br>
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+        <div class="mt-2">
+            <label asp-for="PasswordConfirm">Confirm Password: </label>
+            <input asp-for="PasswordConfirm">
+            <br>
+            <span class="text-danger" asp-validation-for="PasswordConfirm"></span>
+        </div>
+        <button class="btn btn-outline-dark mt-2" type="submit">Register</button>
+    </form>
+</div>

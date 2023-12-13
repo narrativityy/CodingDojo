@@ -1,0 +1,34 @@
+@model Wedding
+
+<div class="d-flex justify-content-center align-items-top text-center">
+    <div>
+        <h2>Plan a Wdding</h2>
+        <form asp-controller="Wedding" asp-action="CreateWedding" method="post">
+            <div>
+                <label asp-for="WedderOne">Wedder One: </label>
+                <input asp-for="WedderOne">
+                <br>
+                <span class="text-danger" asp-validation-for="WedderOne"></span>
+            </div>
+            <div class="mt-2">
+                <label asp-for="WedderTwo">Wedder Two: </label>
+                <input asp-for="WedderTwo">
+                <br>
+                <span class="text-danger" asp-validation-for="WedderTwo"></span>
+            </div>
+            <div class="mt-2">
+                <label asp-for="Date">Date: </label>
+                <input asp-for="Date" type="date">
+                <br>
+                <span class="text-danger" asp-validation-for="Date"></span>
+            </div>
+            <div class="mt-2">
+                <label asp-for="Address">Address: </label>
+                <input asp-for="Address">
+                <br>
+                <span class="text-danger" asp-validation-for="Address"></span>
+            </div>
+            <button class="mt-2 btn btn-outline-dark" type="submit">Create</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+@model LogUser
+
+<div>
+    <h1>Log in</h1>
+    <form asp-controller="User" asp-action="Login">
+        <div>
+            <label asp-for="LogEmail">Email: </label>
+            <input asp-for="LogEmail">
+            <br>
+            <span class="text-danger" asp-validation-for="LogEmail"></span>
+        </div>
+        <div class="mt-2">
+            <label asp-for="LogPassword">Password: </label>
+            <input asp-for="LogPassword">
+            <br>
+            <span class="text-danger" asp-validation-for="LogPassword"></span>
+        </div>
+        <button class="btn btn-outline-dark mt-2" type="submit">Log in</button>
+    </form>
+</div>
